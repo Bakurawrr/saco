@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karaoke Pixel</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>KARAOKE PIXEL</h1>
+    </header>
+
+    <section class="filters">
+        <select id="genreFilter">
+            <option value="all">Todos los géneros</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="anime">Anime</option>
+            <option value="latin">Latino</option>
+        </select>
+
+        <select id="langFilter">
+            <option value="all">Todos los idiomas</option>
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="jp">Japonés</option>
+        </select>
+    </section>
+
+    <section id="songList" class="song-list"></section>
+
+    <script src="app.js"></script>
+</body>
+</html>
